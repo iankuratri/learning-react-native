@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
   Button,
   Image,
@@ -7,6 +7,8 @@ import {
   Text,
   TouchableHighlight,
   Alert,
+  Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -48,17 +50,18 @@ export default function App() {
         title="Click me"
         onPress={() => handlePress("Button")}
       />
-      <StatusBar style="auto" />
+      <ExpoStatusBar style="auto" />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 40,
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingHorizontal: 20,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
