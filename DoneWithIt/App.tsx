@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import {
+  Button,
   Image,
   SafeAreaView,
   StyleSheet,
@@ -31,6 +32,12 @@ export default function App() {
           }}
         />
       </TouchableHighlight>
+
+      <Button
+        color={"orange"}
+        title="Click me"
+        onPress={() => handlePress("Button")}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
