@@ -6,11 +6,21 @@ import {
   StyleSheet,
   Text,
   TouchableHighlight,
+  Alert,
 } from "react-native";
 
 export default function App() {
   const handlePress = (element: string) => {
-    console.log(`${element} pressed.`);
+    Alert.alert("My title", `${element} pressed.`, [
+      {
+        text: "Yes",
+        onPress: () => console.log("Yes"),
+      },
+      {
+        text: "No",
+        onPress: () => console.log("No"),
+      },
+    ]);
   };
 
   return (
