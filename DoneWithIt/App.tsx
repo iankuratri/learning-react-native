@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { Image, SafeAreaView, StyleSheet, Text } from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -15,6 +15,13 @@ export default function App() {
         quo, molestias provident officiis nulla sunt exercitationem repellat
         quam dolor reiciendis.
       </Text>
+      <Image
+        source={{
+          width: 200,
+          height: 300,
+          uri: "https://picsum.photos/200/300",
+        }}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -24,8 +31,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 40,
     flex: 1,
-    backgroundColor: "dodgerblue",
-    // alignItems: "center",
-    // justifyContent: "center",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
