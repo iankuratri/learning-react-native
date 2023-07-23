@@ -8,8 +8,10 @@ const Flexbox = () => {
         backgroundColor: "#fff",
         flex: 1,
         flexDirection: "row",
-        justifyContent: "space-between", // Primary axis, Main, Horizontal, X
-        alignItems: "center", // Cross axis, Secondary, Vertical, Y
+        justifyContent: "center", // Primary axis, Main, Horizontal, X
+        alignItems: "center", // Cross axis, Secondary, Vertical, Y - Align each line
+        alignContent: "center", // Align entire content
+        flexWrap: "wrap",
       }}
     >
       <View style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}>
@@ -20,13 +22,19 @@ const Flexbox = () => {
           backgroundColor: "gold",
           width: 100,
           height: 100,
-          alignSelf: "flex-end",
+          //   alignSelf: "flex-end",
         }}
       >
         <Text>2</Text>
       </View>
       <View style={{ backgroundColor: "tomato", width: 100, height: 100 }}>
         <Text>3</Text>
+      </View>
+      <View style={{ backgroundColor: "grey", width: 100, height: 100 }}>
+        <Text>4</Text>
+      </View>
+      <View style={{ backgroundColor: "greenyellow", width: 100, height: 100 }}>
+        <Text>5</Text>
       </View>
     </View>
   );
