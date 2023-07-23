@@ -41,7 +41,16 @@ const Flexbox = () => {
       <View style={{ backgroundColor: "grey", width: 100, height: 100 }}>
         <Text>4</Text>
       </View>
-      <View style={{ backgroundColor: "greenyellow", width: 100, height: 100 }}>
+      <View
+        style={{
+          backgroundColor: "greenyellow",
+          width: 100,
+          height: 100,
+          position: "absolute",
+          top: 50,
+          left: 50,
+        }}
+      >
         <Text>5</Text>
       </View>
     </View>
