@@ -1,3 +1,4 @@
+import { useDeviceOrientation } from "@react-native-community/hooks";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
   Dimensions,
@@ -6,15 +7,26 @@ import {
   StatusBar,
   StyleSheet,
   View,
+  useWindowDimensions,
 } from "react-native";
 
 export default function App() {
   console.log(Dimensions.get("screen"));
 
+  const orientation = useDeviceOrientation();
+  console.log("orientation:", orientation);
+
+  const dimensions = useWindowDimensions();
+  console.log("dimensions:", dimensions);
+
   return (
     <SafeAreaView style={styles.container}>
       <View
-        style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: orientation === "portrait" ? "30%" : "100%",
+        }}
       ></View>
       <ExpoStatusBar style="auto" />
     </SafeAreaView>
