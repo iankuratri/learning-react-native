@@ -14,12 +14,20 @@ const Flexbox = () => {
         flexWrap: "wrap",
       }}
     >
-      <View style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}>
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          flexBasis: 100, // It is same as setting width or height depending upon flex direction
+          //   width: 100,
+          height: 100,
+        }}
+      >
         <Text>1</Text>
       </View>
       <View
         style={{
           backgroundColor: "gold",
+          flexGrow: 1, // specifies how much the item will grow relative to the rest of the flexible items inside the same container
           width: 100,
           height: 100,
           //   alignSelf: "flex-end",
