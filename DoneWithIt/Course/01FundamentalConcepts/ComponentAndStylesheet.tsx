@@ -1,18 +1,17 @@
-// @ts-nocheck
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
+  Alert,
   Button,
   Image,
+  Platform,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableHighlight,
-  Alert,
-  Platform,
-  StatusBar,
 } from "react-native";
 
-export default function App() {
+export default function ComponentAndStylesheet() {
   const handlePress = (element: string) => {
     Alert.alert("My title", `${element} pressed.`, [
       {
