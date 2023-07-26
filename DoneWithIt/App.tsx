@@ -17,8 +17,8 @@
 // import Icons from "./course/03Styling/Icons";
 
 // Imports
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  return <ListingDetailsScreen />;
+  return <ViewImageScreen />;
 }
