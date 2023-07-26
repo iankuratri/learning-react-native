@@ -1,15 +1,18 @@
-// Fundamental Concepts
+// 01 Fundamental Concepts
 // import ComponentAndStylesheet from "./Course/01FundamentalConcepts/ComponentAndStylesheet";
 
-// Dimension And Orientation
+// 02 Layout
 // import DimensionAndOrientation from "./Course/02Layout/DimensionAndOrientation";
 // import Flexbox from "./Course/02Layout/Flexbox";
 
-// Exercise
+// 02 Exercise
 // import WelcomeScreen from "./app/screens/WelcomeScreen";
+// import ViewImageScreen from "./app/screens/ViewImageScreen";
 
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+// 03 Styling
+import Borders from "./Course/03Styling/Borders";
+// Imports
 
 export default function App() {
-  return <ViewImageScreen />;
+  return <Borders />;
 }
