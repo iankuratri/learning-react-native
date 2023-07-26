@@ -25,7 +25,7 @@ function ListItem({ title, subTitle, image }: ListItemProps) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "flex-start",
+    padding: 15,
   },
   image: {
     width: 70,
