@@ -10,9 +10,9 @@
 // import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 // 03 Styling
-import Borders from "./Course/03Styling/Borders";
-// Imports
+// import Borders from "./Course/03Styling/Borders";
+import Shadows from "./Course/03Styling/Shadows";
 
 export default function App() {
-  return <Borders />;
+  return <Shadows />;
 }
