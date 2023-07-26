@@ -12,8 +12,9 @@
 // 03 Styling
 // import Borders from "./Course/03Styling/Borders";
 // import Shadows from "./Course/03Styling/Shadows";
-import PaddingAndMargin from "./Course/03Styling/PaddingAndMargin";
+// import PaddingAndMargin from "./Course/03Styling/PaddingAndMargin";
+import StylingText from "./Course/03Styling/StylingText";
 
 export default function App() {
-  return <PaddingAndMargin />;
+  return <StylingText />;
 }
