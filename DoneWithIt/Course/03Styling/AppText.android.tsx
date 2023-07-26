@@ -7,7 +7,9 @@ function AppText({ children }: any) {
 
 const styles = StyleSheet.create({
   text: {
-    color: "gold",
+    color: "dodgerblue",
+    fontSize: 18,
+    fontFamily: "Roboto",
   },
 });
 

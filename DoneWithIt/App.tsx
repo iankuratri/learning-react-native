@@ -13,9 +13,9 @@
 // import Borders from "./Course/03Styling/Borders";
 // import Shadows from "./Course/03Styling/Shadows";
 // import PaddingAndMargin from "./Course/03Styling/PaddingAndMargin";
-// import StylingText from "./Course/03Styling/StylingText";
-import Icons from "./Course/03Styling/Icons";
+import StylingText from "./Course/03Styling/StylingText";
+// import Icons from "./Course/03Styling/Icons";
 
 export default function App() {
-  return <Icons />;
+  return <StylingText />;
 }
