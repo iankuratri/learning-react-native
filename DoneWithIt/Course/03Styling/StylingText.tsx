@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import AppText from "./AppText";
 
 function StylingText() {
   return (
@@ -25,6 +26,7 @@ function StylingText() {
       >
         I love React Native! This is my first mobile App.
       </Text>
+      <AppText>This text is rendered using AppText component!</AppText>
     </View>
   );
 }
