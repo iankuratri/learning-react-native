@@ -1,5 +1,11 @@
 import React from "react";
-import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  TouchableHighlight,
+  View,
+} from "react-native";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
@@ -7,18 +13,21 @@ interface ListItemProps {
   title: string;
   subTitle: string;
   image: ImageSourcePropType;
+  onPress: () => any;
 }
 
-function ListItem({ title, subTitle, image }: ListItemProps) {
+function ListItem({ title, subTitle, image, onPress }: ListItemProps) {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
+    <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image} />
 
-      <View>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <View>
+          <AppText style={styles.title}>{title}</AppText>
+          <AppText style={styles.subTitle}>{subTitle}</AppText>
+        </View>
       </View>
-    </View>
+    </TouchableHighlight>
   );
 }
 
