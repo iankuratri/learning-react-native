@@ -30,7 +30,7 @@ function MessagesScreen() {
   const [messages, setMessages] = useState(DATA);
 
   const handleDelete = (message: any) => {
-    const newMessages = messages.filter((m: any) => m.id === message.id);
+    const newMessages = messages.filter((m: any) => m.id !== message.id);
     setMessages(newMessages);
   };
 
