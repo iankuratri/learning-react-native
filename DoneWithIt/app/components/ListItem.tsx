@@ -14,8 +14,8 @@ interface ListItemProps {
   title: string;
   subTitle: string;
   image: ImageSourcePropType;
-  onPress: () => any;
-  renderRightActions: () => ReactNode;
+  onPress?: () => any;
+  renderRightActions?: () => ReactNode;
 }
 
 function ListItem({
