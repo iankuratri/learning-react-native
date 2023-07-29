@@ -4,10 +4,11 @@ import { SafeAreaView, StyleSheet } from "react-native";
 
 interface ScreenProps {
   children: ReactNode;
+  style?: Object;
 }
 
-function Screen({ children }: ScreenProps) {
-  return <SafeAreaView style={styles.screen}>{children}</SafeAreaView>;
+function Screen({ children, style = {} }: ScreenProps) {
+  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
 }
 
 const styles = StyleSheet.create({

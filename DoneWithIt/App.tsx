@@ -13,24 +13,8 @@
 // import Icons from "./course/03Styling/Icons";
 
 // Imports
-import AppIcon from "./app/components/AppIcon";
-import ListItem from "./app/components/ListItem";
-import Screen from "./app/screens/Screen";
+import AccountsScreen from "./app/screens/AccountsScreen";
 
 export default function App() {
-  return (
-    <Screen>
-      <ListItem
-        title="My title"
-        ImageComponent={
-          <AppIcon
-            name="email"
-            size={40}
-            backgroundColor="dodgerblue"
-            iconColor="white"
-          />
-        }
-      />
-    </Screen>
-  );
+  return <AccountsScreen />;
 }
