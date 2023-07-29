@@ -14,25 +14,12 @@
 
 // 04 Input Components
 // import InputText from "./course/04InputComponents/TextInput";
+import SwitchComp from "./course/04InputComponents/Switch";
 
 // Imports
-import { useState } from "react";
-import AppTextInput from "./app/components/AppTextInput";
-import Screen from "./app/screens/Screen";
 
 function App() {
-  const [firstName, setFirstName] = useState("");
-
-  return (
-    <Screen>
-      <AppTextInput
-        placeholder="First name"
-        icon="email"
-        onChangeText={setFirstName}
-        value={firstName}
-      />
-    </Screen>
-  );
+  return <SwitchComp />;
 }
 
 export default App;
