@@ -28,6 +28,7 @@ const DATA = [
 
 function MessagesScreen() {
   const [messages, setMessages] = useState(DATA);
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = (message: any) => {
     const newMessages = messages.filter((m: any) => m.id !== message.id);
@@ -51,6 +52,8 @@ function MessagesScreen() {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => setMessages([...DATA])}
       />
     </Screen>
   );
