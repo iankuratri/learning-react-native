@@ -14,16 +14,22 @@
 
 // Imports
 import AppIcon from "./app/components/AppIcon";
+import ListItem from "./app/components/ListItem";
 import Screen from "./app/screens/Screen";
 
 export default function App() {
   return (
     <Screen>
-      <AppIcon
-        name="email"
-        size={100}
-        backgroundColor="dodgerblue"
-        iconColor="white"
+      <ListItem
+        title="My title"
+        ImageComponent={
+          <AppIcon
+            name="email"
+            size={40}
+            backgroundColor="dodgerblue"
+            iconColor="white"
+          />
+        }
       />
     </Screen>
   );

@@ -15,8 +15,9 @@ import AppText from "./AppText";
 
 interface ListItemProps {
   title: string;
-  subTitle: string;
-  image: ImageSourcePropType;
+  subTitle?: string;
+  image?: ImageSourcePropType;
+  ImageComponent?: ReactNode;
   onPress?: () => any;
   renderRightActions?: () => ReactNode;
 }
@@ -25,6 +26,7 @@ function ListItem({
   title,
   subTitle,
   image,
+  ImageComponent,
   onPress,
   renderRightActions,
 }: ListItemProps) {
@@ -33,11 +35,14 @@ function ListItem({
       <Swipeable renderRightActions={renderRightActions}>
         <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
           <View style={styles.container}>
-            <Image style={styles.image} source={image} />
+            {ImageComponent}
+            {image && <Image style={styles.image} source={image} />}
 
-            <View>
+            <View style={styles.detailsContainer}>
               <AppText style={styles.title}>{title}</AppText>
-              <AppText style={styles.subTitle}>{subTitle}</AppText>
+              {subTitle && (
+                <AppText style={styles.subTitle}>{subTitle}</AppText>
+              )}
             </View>
           </View>
         </TouchableHighlight>
@@ -55,7 +60,10 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 35,
-    marginRight: 10,
+  },
+  detailsContainer: {
+    marginLeft: 10,
+    justifyContent: "center",
   },
   title: {
     fontWeight: "500",
