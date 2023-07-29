@@ -12,9 +12,11 @@
 // import StylingText from "./course/03Styling/StylingText";
 // import Icons from "./course/03Styling/Icons";
 
-// Imports
-import ListingScreen from "./app/screens/ListingScreen";
+// 04 Input Components
+import InputText from "./course/04InputComponents/TextInput";
 
-export default function App() {
-  return <ListingScreen />;
+function App() {
+  return <InputText />;
 }
+
+export default App;
