@@ -13,10 +13,26 @@
 // import Icons from "./course/03Styling/Icons";
 
 // 04 Input Components
-import InputText from "./course/04InputComponents/TextInput";
+// import InputText from "./course/04InputComponents/TextInput";
+
+// Imports
+import { useState } from "react";
+import AppTextInput from "./app/components/AppTextInput";
+import Screen from "./app/screens/Screen";
 
 function App() {
-  return <InputText />;
+  const [firstName, setFirstName] = useState("");
+
+  return (
+    <Screen>
+      <AppTextInput
+        placeholder="First name"
+        icon="email"
+        onChangeText={setFirstName}
+        value={firstName}
+      />
+    </Screen>
+  );
 }
 
 export default App;
