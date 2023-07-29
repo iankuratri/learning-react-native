@@ -13,8 +13,18 @@
 // import Icons from "./course/03Styling/Icons";
 
 // Imports
-import MessagesScreen from "./app/screens/MessagesScreen";
+import AppIcon from "./app/components/AppIcon";
+import Screen from "./app/screens/Screen";
 
 export default function App() {
-  return <MessagesScreen />;
+  return (
+    <Screen>
+      <AppIcon
+        name="email"
+        size={100}
+        backgroundColor="dodgerblue"
+        iconColor="white"
+      />
+    </Screen>
+  );
 }
