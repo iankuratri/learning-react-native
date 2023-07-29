@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   textInput: {
+    flex: 1,
     ...defaultStyles.text,
   },
 });
