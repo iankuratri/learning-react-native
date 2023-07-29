@@ -1,7 +1,8 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
-import { Platform, StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 interface AppTextInputProps {
   icon?: string | any;
@@ -40,9 +41,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   textInput: {
-    fontSize: 18,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-    color: colors.dark,
+    ...defaultStyles.text,
   },
 });
 
