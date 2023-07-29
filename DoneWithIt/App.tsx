@@ -13,8 +13,8 @@
 // import Icons from "./course/03Styling/Icons";
 
 // Imports
-import AccountsScreen from "./app/screens/AccountsScreen";
+import ListingScreen from "./app/screens/ListingScreen";
 
 export default function App() {
-  return <AccountsScreen />;
+  return <ListingScreen />;
 }

@@ -5,7 +5,7 @@ import AppText from "./AppText";
 
 interface AppCardProps {
   title: string;
-  subTitle: string;
+  subTitle: string | number;
   image: ImageSourcePropType;
 }
 
