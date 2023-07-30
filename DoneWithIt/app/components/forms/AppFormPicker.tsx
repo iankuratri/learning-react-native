@@ -12,9 +12,18 @@ interface AppFormPicker {
   name: string;
   placeholder: string;
   width?: string | number;
+  numberOfColumns?: number;
+  PickerItemComponent?: any;
 }
 
-function AppFormPicker({ items, name, placeholder, width }: AppFormPicker) {
+function AppFormPicker({
+  items,
+  name,
+  placeholder,
+  width,
+  numberOfColumns,
+  PickerItemComponent,
+}: AppFormPicker) {
   const { errors, setFieldValue, touched, values } = useFormikContext();
 
   return (
@@ -25,6 +34,8 @@ function AppFormPicker({ items, name, placeholder, width }: AppFormPicker) {
         placeholder={placeholder}
         selectedItem={values[name]}
         width={width}
+        numberOfColumns={numberOfColumns}
+        PickerItemComponent={PickerItemComponent}
       />
       <AppError error={errors[name]} visible={touched[name]} />
     </>
