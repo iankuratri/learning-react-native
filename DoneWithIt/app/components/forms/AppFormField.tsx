@@ -2,7 +2,7 @@
 import { useFormikContext } from "formik";
 import React from "react";
 import AppError from "./AppError";
-import AppTextInput from "./AppTextInput";
+import AppTextInput from "../AppTextInput";
 
 interface AppFormFieldProps {
   name: string;
