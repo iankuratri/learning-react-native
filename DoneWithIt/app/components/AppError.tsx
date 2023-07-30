@@ -4,10 +4,11 @@ import AppText from "./AppText";
 
 interface AppErrorProps {
   error: string | undefined;
+  visible: boolean | undefined;
 }
 
-function AppError({ error }: AppErrorProps) {
-  if (!error) return null;
+function AppError({ error, visible }: AppErrorProps) {
+  if (!visible || !error) return null;
 
   return <AppText style={styles.error}>{error}</AppText>;
 }
