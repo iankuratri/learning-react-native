@@ -1,7 +1,7 @@
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 function App() {
-  return <ListingEditScreen />;
+  return <MessagesScreen />;
 }
 
 export default App;
