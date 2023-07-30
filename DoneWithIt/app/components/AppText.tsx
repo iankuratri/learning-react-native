@@ -5,10 +5,15 @@ import defaultStyles from "../config/styles";
 interface AppTextProps {
   children: ReactNode;
   style?: Object;
+  [otherProps: string]: unknown;
 }
 
-function AppText({ children, style }: AppTextProps) {
-  return <Text style={[defaultStyles.text, style]}>{children}</Text>;
+function AppText({ children, style, ...otherProps }: AppTextProps) {
+  return (
+    <Text style={[defaultStyles.text, style]} {...otherProps}>
+      {children}
+    </Text>
+  );
 }
 
 export default AppText;
