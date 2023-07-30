@@ -1,7 +1,7 @@
-import LoginScreen from "./app/screens/LoginScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 function App() {
-  return <LoginScreen />;
+  return <ListingEditScreen />;
 }
 
 export default App;
