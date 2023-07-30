@@ -22,6 +22,7 @@ interface AppPickerProps {
   items: Item[];
   selectedItem: Item | null;
   onSelectItem: (item: any) => void;
+  width?: string | number;
 }
 
 function AppPicker({
@@ -30,13 +31,14 @@ function AppPicker({
   items,
   selectedItem,
   onSelectItem,
+  width = "100%",
 }: AppPickerProps) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <React.Fragment>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, { width }]}>
           {icon && (
             <MaterialCommunityIcons
               name={icon}
@@ -89,7 +91,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
-    width: "100%",
     padding: 15,
     marginVertical: 10,
   },
