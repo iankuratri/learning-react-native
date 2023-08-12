@@ -1,14 +1,24 @@
 import { useState } from "react";
-import { View } from "react-native";
-import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 function App() {
-  const [imageUri, setImageUri] = useState<string | undefined>(undefined);
+  const [imageUris, setImageUris] = useState<string[]>([]);
+
+  const handleAdd = (uri: any) => {
+    setImageUris((prevState) => [...prevState, uri]);
+  };
+
+  const handleRemove = (uri: any) => {
+    const newUris = imageUris.filter((imageUri) => imageUri !== uri);
+    setImageUris(newUris);
+  };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <ImageInput imageUri={imageUri} onChangeImage={setImageUri} />
-    </View>
+    <ImageInputList
+      imageUris={imageUris}
+      onRemoveImage={handleRemove}
+      onAddImage={handleAdd}
+    />
   );
 }
 

@@ -11,7 +11,7 @@ import {
 import defaultColors from "../config/colors";
 
 interface ImageInputProps {
-  imageUri: string | undefined;
+  imageUri?: string | undefined;
   onChangeImage: (url: string | undefined) => void;
 }
 
