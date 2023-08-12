@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ImageInputList from "./app/components/ImageInputList";
+import Screen from "./app/screens/Screen";
 
 function App() {
   const [imageUris, setImageUris] = useState<string[]>([]);
@@ -14,11 +15,13 @@ function App() {
   };
 
   return (
-    <ImageInputList
-      imageUris={imageUris}
-      onRemoveImage={handleRemove}
-      onAddImage={handleAdd}
-    />
+    <Screen>
+      <ImageInputList
+        imageUris={imageUris}
+        onRemoveImage={handleRemove}
+        onAddImage={handleAdd}
+      />
+    </Screen>
   );
 }
 
