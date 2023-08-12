@@ -1,7 +1,7 @@
-import UsingImagePicker from "./course/05NativeFeatures/UsingImagePicker";
+import ImagePickerExample from "./course/05NativeFeatures/ImagePickerExample";
 
 function App() {
-  return <UsingImagePicker />;
+  return <ImagePickerExample />;
 }
 
 export default App;
