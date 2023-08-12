@@ -1,7 +1,15 @@
-import ImagePickerExample from "./course/05NativeFeatures/ImagePickerExample";
+import { useState } from "react";
+import { View } from "react-native";
+import ImageInput from "./app/components/ImageInput";
 
 function App() {
-  return <ImagePickerExample />;
+  const [imageUri, setImageUri] = useState<string | undefined>(undefined);
+
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ImageInput imageUri={imageUri} onChangeImage={setImageUri} />
+    </View>
+  );
 }
 
 export default App;
