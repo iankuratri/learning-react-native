@@ -1,7 +1,7 @@
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import StackNavigator from "./course/06Navigation/StackNavigator";
 
 function App() {
-  return <ListingEditScreen />;
+  return <StackNavigator />;
 }
 
 export default App;
