@@ -1,7 +1,7 @@
-import StackNavigator from "./course/06Navigation/StackNavigator";
+import TabNavigator from "./course/06Navigation/TabNavigator";
 
 function App() {
-  return <StackNavigator />;
+  return <TabNavigator />;
 }
 
 export default App;
