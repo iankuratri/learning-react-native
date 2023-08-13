@@ -39,7 +39,13 @@ function StackNavigator() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Tweets">
         <Stack.Screen name="Tweets" component={Tweets} />
-        <Stack.Screen name="TweetDetails" component={TweetDetails} />
+        <Stack.Screen
+          name="TweetDetails"
+          component={TweetDetails}
+          options={({ route }: any) => ({
+            title: `Tweet Details ${route.params.id}`,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
