@@ -1,7 +1,7 @@
-import TabNavigator from "./course/06Navigation/TabNavigator";
+import TabNavigatorContainer from "./course/06Navigation/TabNavigator";
 
 function App() {
-  return <TabNavigator />;
+  return <TabNavigatorContainer />;
 }
 
 export default App;

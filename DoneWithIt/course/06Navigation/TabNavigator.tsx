@@ -4,6 +4,7 @@ import React from "react";
 import AppText from "../../app/components/AppText";
 import Screen from "./../../app/screens/Screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { StackNavigator as FeedNavigator } from "./StackNavigator";
 
 function Feed() {
   return (
@@ -23,7 +24,7 @@ function Account() {
 
 const Tab = createBottomTabNavigator();
 
-function TabNavigator() {
+function TabNavigatorContainer() {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -37,7 +38,7 @@ function TabNavigator() {
       >
         <Tab.Screen
           name="Feed"
-          component={Feed}
+          component={FeedNavigator}
           options={{
             tabBarIcon: ({ size, color }) => (
               <MaterialCommunityIcons name="home" size={size} color={color} />
@@ -62,4 +63,4 @@ function TabNavigator() {
   );
 }
 
-export default TabNavigator;
+export default TabNavigatorContainer;

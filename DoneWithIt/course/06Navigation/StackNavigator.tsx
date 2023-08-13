@@ -34,37 +34,41 @@ function TweetDetails({ route }: any) {
 
 const Stack = createNativeStackNavigator();
 
-function StackNavigator() {
+export function StackNavigator() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Tweets"
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#f4511e",
+    <Stack.Navigator
+      initialRouteName="Tweets"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#f4511e",
+        },
+        headerTintColor: "#fff",
+      }}
+    >
+      <Stack.Screen
+        name="Tweets"
+        component={Tweets}
+        options={{
+          headerTitleStyle: {
+            fontWeight: "bold",
           },
-          headerTintColor: "#fff",
         }}
-      >
-        <Stack.Screen
-          name="Tweets"
-          component={Tweets}
-          options={{
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
-        />
-        <Stack.Screen
-          name="TweetDetails"
-          component={TweetDetails}
-          options={({ route }: any) => ({
-            title: `Tweet Details ${route.params.id}`,
-          })}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+      />
+      <Stack.Screen
+        name="TweetDetails"
+        component={TweetDetails}
+        options={({ route }: any) => ({
+          title: `Tweet Details ${route.params.id}`,
+        })}
+      />
+    </Stack.Navigator>
   );
 }
 
-export default StackNavigator;
+function StackNavigatorContainer() {
+  <NavigationContainer>
+    <StackNavigator />
+  </NavigationContainer>;
+}
+
+export default StackNavigatorContainer;
