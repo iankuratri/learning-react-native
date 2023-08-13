@@ -17,16 +17,16 @@ function Tweets({ navigation }: any) {
       <AppText>Tweets</AppText>
       <AppButton
         title="View Tweet"
-        onPress={() => navigation.navigate("TweetDetails")}
+        onPress={() => navigation.navigate("TweetDetails", { id: 1 })}
       />
     </Screen>
   );
 }
 
-function TweetDetails() {
+function TweetDetails({ route }: any) {
   return (
     <Screen>
-      <AppText>Tweet Details</AppText>
+      <AppText>Tweet Details {route.params.id}</AppText>
       <Goback />
     </Screen>
   );
