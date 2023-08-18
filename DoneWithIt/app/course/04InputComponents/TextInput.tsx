@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, TextInput } from "react-native";
-import Screen from "../../app/screens/Screen";
+import Screen from "../../screens/Screen";
 
 function InputText() {
   const [firstName, setFirstName] = useState("");

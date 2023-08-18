@@ -1,9 +1,9 @@
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import AppButton from "../../app/components/AppButton";
-import AppText from "../../app/components/AppText";
-import Screen from "./../../app/screens/Screen";
+import AppButton from "../../components/AppButton";
+import AppText from "../../components/AppText";
+import Screen from "../../screens/Screen";
 
 function Goback() {
   const navigation = useNavigation();

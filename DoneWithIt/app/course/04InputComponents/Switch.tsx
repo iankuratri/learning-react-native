@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Switch } from "react-native";
-import Screen from "../../app/screens/Screen";
+import Screen from "../../screens/Screen";
 import { useState } from "react";
 
 function SwitchComp() {

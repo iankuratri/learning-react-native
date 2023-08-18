@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import AppText from "../../app/components/AppText";
-import Screen from "./../../app/screens/Screen";
+import AppText from "../../components/AppText";
+import Screen from "./../../screens/Screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { StackNavigator as FeedNavigator } from "./StackNavigator";
 
