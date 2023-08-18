@@ -1,7 +1,12 @@
-import TabNavigatorContainer from "./course/06Navigation/TabNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import AuthNavigator from "./app/navigation/AuthNavigator";
 
 function App() {
-  return <TabNavigatorContainer />;
+  return (
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
+  );
 }
 
 export default App;
