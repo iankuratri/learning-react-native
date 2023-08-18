@@ -1,8 +1,13 @@
+import { NavigationProp } from "@react-navigation/native";
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 import AppCard from "../components/AppCard";
 import colors from "../config/colors";
 import Screen from "./Screen";
+
+interface ListingScreenProps {
+  navigation: NavigationProp<any, any>;
+}
 
 const listings = [
   {
@@ -19,7 +24,7 @@ const listings = [
   },
 ];
 
-function ListingScreen() {
+function ListingScreen({ navigation }: ListingScreenProps) {
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -27,6 +32,7 @@ function ListingScreen() {
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (
           <AppCard
+            onPress={() => navigation.navigate("ListingDetails", item)}
             title={item.title}
             subTitle={"$" + item.price}
             image={item.image}

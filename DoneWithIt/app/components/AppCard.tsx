@@ -1,5 +1,11 @@
 import React from "react";
-import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
@@ -7,18 +13,21 @@ interface AppCardProps {
   title: string;
   subTitle: string | number;
   image: ImageSourcePropType;
+  onPress?: () => any;
 }
 
-function AppCard({ title, subTitle, image }: AppCardProps) {
+function AppCard({ title, subTitle, image, onPress }: AppCardProps) {
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={image} />
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.card}>
+        <Image style={styles.image} source={image} />
 
-      <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <View style={styles.detailsContainer}>
+          <AppText style={styles.title}>{title}</AppText>
+          <AppText style={styles.subTitle}>{subTitle}</AppText>
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 
