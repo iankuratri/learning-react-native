@@ -7,9 +7,15 @@ const Stack = createNativeStackNavigator();
 
 function FeedNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: true }}>
       <Stack.Screen name="Listings" component={ListingScreen} />
-      <Stack.Screen name="ListingDetails" component={ListingDetailsScreen} />
+      <Stack.Screen
+        name="ListingDetails"
+        component={ListingDetailsScreen}
+        options={{
+          title: "Listing Details",
+        }}
+      />
     </Stack.Navigator>
   );
 }
