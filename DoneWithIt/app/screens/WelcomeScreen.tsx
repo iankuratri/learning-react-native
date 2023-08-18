@@ -2,6 +2,7 @@ import { NavigationProp } from "@react-navigation/native";
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import AppButton from "../components/AppButton";
+import routes from "../navigation/routes";
 
 interface WelcomeScreenProps {
   navigation: NavigationProp<any, any>;
@@ -20,11 +21,14 @@ function WelcomeScreen({ navigation }: WelcomeScreenProps) {
       </View>
 
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" onPress={() => navigation.navigate("Login")} />
+        <AppButton
+          title="Login"
+          onPress={() => navigation.navigate(routes.LOGIN)}
+        />
         <AppButton
           title="Register"
           color="secondary"
-          onPress={() => navigation.navigate("Register")}
+          onPress={() => navigation.navigate(routes.REGISTER)}
         />
       </View>
     </ImageBackground>
